@@ -2,7 +2,6 @@
 * {
     margin: 0;
     padding: 0;
-    list-style: none;
     box-sizing: border-box;
 }
 
@@ -27,20 +26,14 @@ header {
     padding: 1.25rem 5%;
 }
 
-header nav ul li a{
-    color: white;
-    text-decoration: none;
-}
-
 header img {
     height: 3rem;
 }
 
-
-
 /* HERO SECTION */
 .hero {
-    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4));
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                url('imagens/hero.jpg') no-repeat center/cover;
     color: #FFFFFF;
     text-align: center;
     padding: 8vh 5vw;
@@ -63,7 +56,7 @@ header img {
     text-decoration: none;
     border-radius: 0.5rem;
     font-weight: bold;
-    transition: 0.3s;
+    transition: background 0.3s;
 }
 
 .btn:hover {
@@ -99,14 +92,12 @@ section {
     max-width: 280px;
     border-radius: 0.75rem;
     overflow: hidden;
-    
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
 }
 
 .card:hover {
     transform: scale(1.03);
-    box-shadow: 0 6px 16px rgb(0, 0, 0);
-    transition:  0.3s;
-    cursor: pointer;
 }
 
 .card img {
@@ -161,7 +152,7 @@ section {
     border-radius: 0.5rem;
     font-weight: bold;
     cursor: pointer;
-    transition: 0.3s;
+    transition: background 0.3s;
 }
 
 .contato button:hover {

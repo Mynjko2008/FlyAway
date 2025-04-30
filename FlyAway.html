@@ -1,29 +1,103 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> FlyAway | Oficial </title>
     <link rel="stylesheet" href="FlyAway.css">
+    <link rel="shortcut icon" href="imagens/FlyAway-1.png" type="image/x-icon">
 </head>
+
 <body>
     <header>
-     teste   
+        <img src="imagens/FlyAway-1.png" alt="Logo da FlyAway">
+
+        <nav>
+            <ul>
+                <li><a href="#destinos">Destinos</a></li>
+                <li><a href="#contato">Contato</a></li>
+
+            </ul>
+        </nav>
+
+
     </header>
 
     <main>
-        <section class="flyaway "> teste </section>
+        <section class="hero">
+            <h1>Viaje com a FlyAway</h1>
+            <p>Descubra destinos incríveis com conforto e praticidade.</p>
+            <a href="#pacotes" class="btn">Ver Pacotes</a>
+        </section>
 
-        <section class="flyaway "> teste </section>
+        <section id="destinos" class="destinos">
+            <h2>Destinos Populares</h2>
+            <div class="cards">
+                <article class="card">
+                    <img src="imagens/paris.jpg" alt="Paris">
+                    <h2>Paris</h2>
+                    <p>A cidade do amor espera por você.</p>
+                </article>
+                <article class="card">
+                    <img src="imagens/rio.jpg" alt="Rio de Janeiro">
+                    <h2>Rio de Janeiro</h2>
+                    <p>Sol, praia e alegria o ano todo.</p>
+                </article>
 
-        <section class="flyaway "> teste </section>
+                <article class="card">
+                    <img src="imagens/floresta.jpg" alt="Floresta Amazonica">
+                    <h2>Floresta Amazonica</h2>
+                    <p>Aventura e natureza no coração da floresta.</p>
+                </article>
 
-        <section class="flyaway "> teste </section>
+                <article class="card">
+                    <img src="imagens/buenos.jpg" alt="Buenos aires">
+                    <h2>Buenos Aires</h2>
+                    <p>Cultura, tango e charme argentino.</p>
+                    </p>
+                </article>
+            </div>
+        </section>
 
+        <section id="pacotes" class="pacotes">
+            <h2>Pacotes Especiais</h2>
+            <ul>
+                <li> <strong> Pacote Europa Clássica </strong> - 10 dias | R$ 15.000</li>
+                <li> <strong> Nordeste Relax </strong> - 7 dias | R$ 8.500</li>
+                <li> <strong> Aventura Amazonica </strong> - 8 dias | R$ 6.000</li>
+                <li> <strong> Cordinheira Dos Andes </strong> - 10 dias | R$ 10.000</li>
+            </ul>
+        </section>
+
+        <section id="contato" class="contato">
+            <h2>Fale Conosco </h2>
+            <form>
+                <input type="text" placeholder="Seu nome" required>
+                <input type="email" placeholder="Seu email" required>
+                <textarea rows="5" placeholder="Sua mensagem..." required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
     </main>
 
     <footer>
-        teste 
+        <p>&copy; 2025 FlyAway Viagens. Todos os direitos reservados.</p>
+        <p>Instagram | WhatsApp | Facebook</p>
     </footer>
+
+    <!-- Tag Para BTN libras -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
 </body>
+
 </html>
