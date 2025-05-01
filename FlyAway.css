@@ -32,6 +32,11 @@ header nav ul li a{
     text-decoration: none;
 }
 
+header nav ul li a:hover{
+    color: yellow;
+    transition: 0.5s;
+}
+
 header img {
     height: 3rem;
 }
@@ -57,7 +62,7 @@ header img {
 }
 
 .btn {
-    background-color: #F76C5E;
+    background-color: #fa1905;
     color: white;
     padding: 0.75rem 1.5rem;
     text-decoration: none;
@@ -67,7 +72,7 @@ header img {
 }
 
 .btn:hover {
-    background-color: #da574a;
+    background-color:  #F76C5E;
 }
 
 /* SEÇÕES GERAIS */
@@ -135,6 +140,30 @@ section {
     margin-bottom: 1rem;
 }
 
+/* SEÇÃO HISTÓRIA */
+.historia {
+    background-color: #FAF9F6; /* fundo claro igual ao restante */
+    padding: 4rem 5%;
+    border-top: 4px solid #2A9D8F; /* linha de separação com cor de destaque */
+    border-bottom: 4px solid #2A9D8F;
+}
+
+.historia h2 {
+    text-align: center;
+    color: #2A9D8F; /* título com verde azulado */
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.historia p {
+    max-width: 800px;
+    margin: 0 auto;
+    color: #264653; /* texto escuro para boa leitura */
+    font-size: 1.125rem;
+    line-height: 1.6;
+    text-align: center;
+}
+
 /* FORMULÁRIO CONTATO */
 .contato form {
     max-width: 600px;
@@ -176,8 +205,6 @@ footer {
     padding: 1.25rem;
     font-size: 0.9rem;
 }
-
-/* ========= MEDIA QUERIES ========= */
 
 /* Telas pequenas - smartphones */
 @media (max-width: 768px) {
