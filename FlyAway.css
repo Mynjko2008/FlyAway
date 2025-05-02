@@ -4,6 +4,7 @@
     padding: 0;
     list-style: none;
     box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 html {
@@ -14,7 +15,6 @@ html {
 body {
     background-color: #FAF9F6;
     color: #264653;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
 }
 
@@ -27,14 +27,38 @@ header {
     padding: 1.25rem 5%;
 }
 
+header nav {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    
+}
+
+header nav ul {
+    display: flex;
+    gap: 1rem;
+}
+
 header nav ul li a{
+    font-size: 1rem;
     color: white;
     text-decoration: none;
 }
 
-header nav ul li a:hover{
+header nav ul li a:hover {
     color: yellow;
     transition: 0.5s;
+}
+
+header nav i {
+    font-size: 1.9rem;
+    color: white;
+    cursor: pointer;
+}
+
+header nav i:hover {
+    color: yellow;
+    transition:  0.5s;
 }
 
 header img {
@@ -82,8 +106,7 @@ section {
 
 /* TITULOS */
 .destinos h2,
-.pacotes h2,
-.contato h2 {
+.pacotes h2 {
     font-size: 2rem;
     text-align: center;
     margin-bottom: 2rem;
@@ -164,38 +187,7 @@ section {
     text-align: center;
 }
 
-/* FORMULÁRIO CONTATO */
-.contato form {
-    max-width: 600px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
 
-.contato input,
-.contato textarea {
-    padding: 0.75rem;
-    border: 1px solid #ccc;
-    border-radius: 0.5rem;
-    font-size: 1rem;
-    width: 100%;
-}
-
-.contato button {
-    background-color: #2A9D8F;
-    color: white;
-    padding: 0.75rem;
-    border: none;
-    border-radius: 0.5rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.contato button:hover {
-    background-color: #247a72;
-}
 
 /* FOOTER */
 footer {

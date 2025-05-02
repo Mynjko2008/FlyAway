@@ -1,130 +1,12 @@
-/* RESET */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    font-size: 16px;
-    scroll-behavior: smooth;
-}
-
-body {
-    background-color: #FAF9F6;
-    color: #264653;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-}
-
-/* HEADER */
-header {
-    background-color: #2A9D8F;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.25rem 5%;
-}
-
-header img {
-    height: 3rem;
-}
-
-/* HERO SECTION */
-.hero {
-    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
-                url('imagens/hero.jpg') no-repeat center/cover;
-    color: #FFFFFF;
-    text-align: center;
-    padding: 8vh 5vw;
-}
-
-.hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-}
-
-.hero p {
-    font-size: 1.125rem;
-    margin-bottom: 2rem;
-}
-
-.btn {
-    background-color: #F76C5E;
-    color: white;
-    padding: 0.75rem 1.5rem;
-    text-decoration: none;
-    border-radius: 0.5rem;
-    font-weight: bold;
-    transition: background 0.3s;
-}
-
-.btn:hover {
-    background-color: #da574a;
-}
-
-/* SEÇÕES GERAIS */
-section {
-    padding: 4rem 5%;
-}
-
-/* TITULOS */
-.destinos h2,
-.pacotes h2,
-.contato h2 {
-    font-size: 2rem;
-    text-align: center;
-    margin-bottom: 2rem;
-    color: #2A9D8F;
-}
-
-/* CARDS */
-.cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1.25rem;
-}
-
-.card {
-    background-color: #FFFFFF;
-    width: 100%;
-    max-width: 280px;
-    border-radius: 0.75rem;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
-}
-
-.card:hover {
-    transform: scale(1.03);
-}
-
-.card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-}
-
-.card h3 {
-    color: #264653;
-    padding: 0.75rem;
-}
-
-.card p {
-    padding: 0 0.75rem 1rem;
-}
-
-/* LISTAS DE PACOTES */
-.pacotes ul {
-    list-style: none;
-    font-size: 1.1rem;
-    padding-left: 1.25rem;
-}
-
-.pacotes li {
-    margin-bottom: 1rem;
-}
+<section id="contato" class="contato">
+            <h2>Fale Conosco </h2>
+            <form>
+                <input type="text" placeholder="Seu nome" required>
+                <input type="email" placeholder="Seu email" required>
+                <textarea rows="5" placeholder="Sua mensagem..." required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+</section>
 
 /* FORMULÁRIO CONTATO */
 .contato form {
@@ -152,79 +34,9 @@ section {
     border-radius: 0.5rem;
     font-weight: bold;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: 0.3s;
 }
 
 .contato button:hover {
     background-color: #247a72;
-}
-
-/* FOOTER */
-footer {
-    background-color: #264653;
-    color: #FFFFFF;
-    text-align: center;
-    padding: 1.25rem;
-    font-size: 0.9rem;
-}
-
-/* ========= MEDIA QUERIES ========= */
-
-/* Telas pequenas - smartphones */
-@media (max-width: 768px) {
-    html {
-        font-size: 15px;
-    }
-
-    .hero h1 {
-        font-size: 2rem;
-    }
-
-    .hero p {
-        font-size: 1rem;
-    }
-
-    header {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .cards {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
-/* Telas médias - tablets */
-@media (min-width: 769px) and (max-width: 1024px) {
-    html {
-        font-size: 16px;
-    }
-
-    .hero h1 {
-        font-size: 2.25rem;
-    }
-
-    .cards {
-        justify-content: space-around;
-    }
-}
-
-/* Telas grandes - desktops maiores */
-@media (min-width: 1280px) {
-    html {
-        font-size: 17px;
-    }
-
-    .hero {
-        padding: 10vh 15vw;
-    }
-
-    .hero h1 {
-        font-size: 3.5rem;
-    }
-
-    .btn {
-        font-size: 1.1rem;
-    }
 }

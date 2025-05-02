@@ -7,6 +7,7 @@
     <title> FlyAway | Oficial </title>
     <link rel="stylesheet" href="FlyAway.css">
     <link rel="shortcut icon" href="imagens/FlyAway-1.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/fec10f46ff.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -16,10 +17,11 @@
         <nav>
             <ul>
                 <li><a href="#destinos">Destinos</a></li>
-                <li><a href="#contato">Contato</a></li>
                 <li><a href="#historia">História</a></li>
             </ul>
+           <a href="form.html"> <i class="fa-solid fa-circle-user"></i> </a> 
         </nav>
+
 
 
     </header>
@@ -66,7 +68,7 @@
                 <article class="card">
                     <img src="imagens/londres.jpg" alt="Londres">
                     <h2>Londres</h2>
-                    <p>>Descubra o charme e a história de Londres - uma cidade que nunca para!</p>
+                    <p>Descubra o charme e a história de Londres - uma cidade que nunca para!</p>
                 </article>
 
                 <article class="card">
@@ -80,6 +82,37 @@
                     <h2>Nova York</h2>
                     <p>A cidade que nunca dorme te convida para viver intensamente!</p>
                 </article>
+
+                <article class="card">
+                    <img src="imagens/roma.jpg" alt="Roma">
+                    <h2>Roma</h2>
+                    <p>Reviva a grandiosidade do Império Romano!</p>
+                </article>
+
+                <article class="card">
+                    <img src="imagens/cancun.jpg" alt="Cancún">
+                    <h2>Cancún</h2>
+                    <p>Praias paradisíacas, resorts de luxo e mar cristalino!</p>
+                </article>
+
+                <article class="card">
+                    <img src="imagens/dubai.jpg" alt="Dubai">
+                    <h2>Dubai</h2>
+                    <p>Luxo e inovação em meio ao deserto!</p>
+                </article>
+
+                <article class="card">
+                    <img src="imagens/cairo.jpg" alt="Cairo">
+                    <h2>Cairo</h2>
+                    <p>Explore as pirâmides e os mistérios do Antigo Egito!</p>
+                </article>
+
+                <article class="card">
+                    <img src="imagens/atenas.jpg" alt="Atenas">
+                    <h2>Atenas</h2>
+                    <p>Berço da civilização ocidental!</p>
+                </article>
+
             </div>
         </section>
 
@@ -92,23 +125,26 @@
                 <li> <strong> Cordinheira Dos Andes </strong> - 10 dias | R$ 10.000</li>
                 <li> <strong> Países Gelados </strong> - 15 dias | R$15.000 </li>
                 <li> <strong> Muralha Da China </strong> - 12 dias | R$8.000 </li>
+                <li> <strong> Rota dos Castelos – Alemanha </strong> - 10 dias | R$ 12.000 </li>
+                <li> <strong> Safari na África do Sul </strong> - 7 dias | R$ 11.500 </li>
+                <li> <strong> Encantos do Japão </strong> - 14 dias | R$ 16.000 </li>
+                <li> <strong> Mediterrâneo Luxo </strong> - 12 dias | R$ 13.800 </li>
+                <li> <strong> Patagônia Selvagem </strong> - 10 dias | R$ 9.700 </li>
+                <li> <strong> Deserto do Saara e Marrocos </strong> - 9 dias | R$ 10.500 </li>
+                <li> <strong> Rota do Vinho – Chile e Argentina </strong> - 8 dias | R$ 7.900 </li>
+                <li> <strong> Ilhas Gregas </strong> - 10 dias | R$ 14.000 </li>
+
             </ul>
         </section>
 
         <section id="historia" class="historia">
             <h2>Nossa História</h2>
-            <p>A FlyAway nasceu com o sonho de transformar viagens em experiências inesquecíveis. Começamos com uma pequena equipe apaixonada por explorar o mundo e, com o tempo, nos tornamos referência em turismo acessível, seguro e personalizado. Hoje, ajudamos milhares de pessoas a realizarem suas viagens dos sonhos, com conforto e tranquilidade.</p>
+            <p>A FlyAway nasceu com o sonho de transformar viagens em experiências inesquecíveis. Começamos com uma
+                pequena equipe apaixonada por explorar o mundo e, com o tempo, nos tornamos referência em turismo
+                acessível, seguro e personalizado. Hoje, ajudamos milhares de pessoas a realizarem suas viagens dos
+                sonhos, com conforto e tranquilidade.</p>
         </section>
 
-        <section id="contato" class="contato">
-            <h2>Fale Conosco </h2>
-            <form>
-                <input type="text" placeholder="Seu nome" required>
-                <input type="email" placeholder="Seu email" required>
-                <textarea rows="5" placeholder="Sua mensagem..." required></textarea>
-                <button type="submit">Enviar</button>
-            </form>
-        </section>
     </main>
 
     <footer>
@@ -128,6 +164,22 @@
         new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
 
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const section = document.getElementById(targetId);
+                if (section) {
+                    section.scrollIntoView({ behavior: 'smooth' });
+
+                    // Remover o # da URL sem recarregar a página
+                    history.pushState(null, null, window.location.pathname);
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
