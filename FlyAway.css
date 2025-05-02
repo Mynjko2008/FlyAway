@@ -1,258 +1,266 @@
 /* RESET */
 * {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0; /* Remove margem padrão */
+    padding: 0; /* Remove preenchimento padrão */
+    list-style: none; /* Remove marcadores de listas */
+    box-sizing: border-box; /* Inclui padding e border no cálculo do tamanho */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Define fonte padrão */
 }
 
 html {
-    font-size: 16px;
-    scroll-behavior: smooth;
+    font-size: 16px; /* Tamanho base da fonte */
+    scroll-behavior: smooth; /* Suaviza a rolagem */
 }
 
 body {
-    background-color: #FAF9F6;
-    color: #264653;
-    line-height: 1.6;
+    background-color: #FAF9F6; /* Cor de fundo do corpo da página */
+    color: #264653; /* Cor padrão do texto */
+    line-height: 1.6; /* Espaçamento entre linhas */
 }
 
 /* HEADER */
 header {
-    background-color: #2A9D8F;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.25rem 5%;
+    background-color: #2A9D8F; /* Cor de fundo do cabeçalho */
+    display: flex; /* Layout flexível */
+    justify-content: space-between; /* Espaço entre logo e navegação */
+    align-items: center; /* Alinha verticalmente */
+    padding: 1.25rem 5%; /* Espaçamento interno */
 }
 
 header nav {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    
+    display: flex; /* Layout flexível para nav */
+    align-items: center; /* Alinha itens verticalmente */
+    gap: 1.5rem; /* Espaçamento entre elementos */
 }
 
 header nav ul {
-    display: flex;
-    gap: 1rem;
+    display: flex; /* Layout flexível para lista de navegação */
+    gap: 1rem; /* Espaço entre os links */
 }
 
-header nav ul li a{
-    font-size: 1rem;
-    color: white;
-    text-decoration: none;
+header nav ul li a {
+    font-size: 1.3rem; /* Tamanho da fonte dos links */
+    color: white; /* Cor dos links */
+    text-decoration: none; /* Remove sublinhado */
 }
 
 header nav ul li a:hover {
-    color: yellow;
-    transition: 0.5s;
+    color: yellow; /* Cor ao passar o mouse */
+    transition: 0.5s; /* Transição suave */
 }
 
 header nav i {
-    font-size: 1.9rem;
-    color: white;
-    cursor: pointer;
+    font-size: 2rem; /* Tamanho dos ícones */
+    color: white; /* Cor do ícone */
+    cursor: pointer; /* Cursor de clique */
 }
 
 header nav i:hover {
-    color: yellow;
-    transition:  0.5s;
+    color: yellow; /* Cor ao passar o mouse no ícone */
+    transition: 0.5s; /* Transição suave */
 }
 
 header img {
-    height: 3rem;
+    height: 3rem; /* Altura da logo */
 }
-
-
 
 /* HERO SECTION */
 .hero {
-    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4));
-    color: #FFFFFF;
-    text-align: center;
-    padding: 8vh 5vw;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)); /* Gradiente escuro */
+    color: #FFFFFF; /* Cor do texto */
+    text-align: center; /* Centraliza texto */
+    padding: 8vh 5vw; /* Espaçamento interno responsivo */
 }
 
 .hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+    font-size: 2.5rem; /* Título grande */
+    margin-bottom: 1rem; /* Espaço abaixo do título */
 }
 
 .hero p {
-    font-size: 1.125rem;
-    margin-bottom: 2rem;
+    font-size: 1.125rem; /* Texto maior */
+    margin-bottom: 2rem; /* Espaço abaixo do parágrafo */
 }
 
 .btn {
-    background-color: #fa1905;
-    color: white;
-    padding: 0.75rem 1.5rem;
-    text-decoration: none;
-    border-radius: 0.5rem;
-    font-weight: bold;
-    transition: 0.3s;
+    background-color: #fa1905; /* Cor de fundo do botão */
+    color: white; /* Cor do texto */
+    padding: 0.75rem 1.5rem; /* Espaçamento interno */
+    text-decoration: none; /* Remove sublinhado */
+    border-radius: 0.5rem; /* Bordas arredondadas */
+    font-weight: bold; /* Texto em negrito */
+    transition: 0.3s; /* Transição suave */
 }
 
 .btn:hover {
-    background-color:  #F76C5E;
+    background-color:  #F76C5E; /* Cor ao passar o mouse */
 }
 
 /* SEÇÕES GERAIS */
 section {
-    padding: 4rem 5%;
+    padding: 4rem 5%; /* Espaçamento padrão das seções */
 }
 
 /* TITULOS */
 .destinos h2,
 .pacotes h2 {
-    font-size: 2rem;
-    text-align: center;
-    margin-bottom: 2rem;
-    color: #2A9D8F;
+    font-size: 2rem; /* Tamanho do título */
+    text-align: center; /* Centraliza */
+    margin-bottom: 2rem; /* Espaço abaixo */
+    color: #2A9D8F; /* Cor do título */
 }
 
 /* CARDS */
 .cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1.25rem;
+    display: flex; /* Layout flexível */
+    flex-wrap: wrap; /* Quebra de linha automática */
+    justify-content: center; /* Centraliza os cards */
+    gap: 1.25rem; /* Espaço entre os cards */
 }
 
 .card {
-    background-color: #FFFFFF;
-    width: 100%;
-    max-width: 280px;
-    border-radius: 0.75rem;
-    overflow: hidden;
-    
+    background-color: #FFFFFF; /* Fundo branco */
+    width: 100%; /* Largura total */
+    max-width: 280px; /* Largura máxima */
+    border-radius: 0.75rem; /* Bordas arredondadas */
+    overflow: hidden; /* Oculta conteúdo que transborda */
 }
 
 .card:hover {
-    transform: scale(1.03);
-    box-shadow: 0 6px 16px rgb(0, 0, 0);
-    transition:  0.3s;
-    cursor: pointer;
+    transform: scale(1.03); /* Aumenta ligeiramente o tamanho */
+    box-shadow: 0 6px 16px rgb(0, 0, 0); /* Sombra no hover */
+    transition: 0.3s; /* Transição suave */
+    cursor: pointer; /* Cursor de clique */
 }
 
 .card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
+    width: 100%; /* Largura total */
+    height: 180px; /* Altura fixa */
+    object-fit: cover; /* Cobre a área mantendo proporção */
 }
 
 .card h3 {
-    color: #264653;
-    padding: 0.75rem;
+    color: #264653; /* Cor do título do card */
+    padding: 0.75rem; /* Espaçamento interno */
 }
 
 .card p {
-    padding: 0 0.75rem 1rem;
+    padding: 0 0.75rem 1rem; /* Espaçamento interno */
 }
 
 /* LISTAS DE PACOTES */
 .pacotes ul {
-    list-style: none;
-    font-size: 1.1rem;
-    padding-left: 1.25rem;
+    list-style: none; /* Remove marcadores */
+    font-size: 1.1rem; /* Tamanho da fonte */
+    padding-left: 1.25rem; /* Recuo esquerdo */
 }
 
 .pacotes li {
-    margin-bottom: 1rem;
+    margin-bottom: 1rem; /* Espaço entre itens */
 }
 
 /* SEÇÃO HISTÓRIA */
 .historia {
-    background-color: #FAF9F6; /* fundo claro igual ao restante */
-    padding: 4rem 5%;
-    border-top: 4px solid #2A9D8F; /* linha de separação com cor de destaque */
-    border-bottom: 4px solid #2A9D8F;
+    background-color: #FAF9F6; /* Fundo claro */
+    padding: 4rem 5%; /* Espaçamento interno */
+    border-top: 4px solid #2A9D8F; /* Borda superior colorida */
+    
 }
 
 .historia h2 {
-    text-align: center;
-    color: #2A9D8F; /* título com verde azulado */
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
+    text-align: center; /* Centraliza o título */
+    color: #2A9D8F; /* Cor do título */
+    font-size: 2rem; /* Tamanho do título */
+    margin-bottom: 1.5rem; /* Espaço abaixo do título */
 }
 
 .historia p {
-    max-width: 800px;
-    margin: 0 auto;
-    color: #264653; /* texto escuro para boa leitura */
-    font-size: 1.125rem;
-    line-height: 1.6;
-    text-align: center;
+    max-width: 800px; /* Largura máxima */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    color: #264653; /* Cor do texto */
+    font-size: 1.125rem; /* Tamanho da fonte */
+    line-height: 1.6; /* Espaçamento entre linhas */
+    text-align: center; /* Centraliza texto */
 }
-
-
 
 /* FOOTER */
 footer {
-    background-color: #264653;
-    color: #FFFFFF;
-    text-align: center;
-    padding: 1.25rem;
-    font-size: 0.9rem;
+    background-color: #264653;  /* Cor de fundo do rodapé */
+    color: #FFFFFF;  /* Cor do texto */
+    text-align: center;  /* Alinha o texto ao centro */
+    padding: 1.25rem;  /* Espaçamento interno */
+    font-size: 0.9rem;  /* Tamanho da fonte */
+}
+
+footer a {
+    color: #FFFFFF;  /* Cor dos links */
+    text-decoration: none;  /* Remove o sublinhado */
+    font-weight: bold;  /* Deixa os links em negrito */
+    margin: 0 0.5rem;  /* Espaçamento entre os links */
+    
+}
+
+footer a:hover {
+    color: yellow;  /* Cor do link quando o cursor passa sobre ele */
+    text-decoration: none;  /* Adiciona o sublinhado no hover */
+    transition:  0.5s;  /* Efeito de transição para o hover */
 }
 
 /* Telas pequenas - smartphones */
 @media (max-width: 768px) {
     html {
-        font-size: 15px;
+        font-size: 15px; /* Reduz tamanho da fonte */
     }
 
     .hero h1 {
-        font-size: 2rem;
+        font-size: 2rem; /* Título menor */
     }
 
     .hero p {
-        font-size: 1rem;
+        font-size: 1rem; /* Parágrafo menor */
     }
 
     header {
-        flex-direction: column;
-        text-align: center;
+        flex-direction: column; /* Empilha os elementos */
+        text-align: center; /* Centraliza */
     }
 
     .cards {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column; /* Coloca os cards um abaixo do outro */
+        align-items: center; /* Centraliza os cards */
     }
 }
 
 /* Telas médias - tablets */
 @media (min-width: 769px) and (max-width: 1024px) {
     html {
-        font-size: 16px;
+        font-size: 16px; /* Fonte padrão */
     }
 
     .hero h1 {
-        font-size: 2.25rem;
+        font-size: 2.25rem; /* Título médio */
     }
 
     .cards {
-        justify-content: space-around;
+        justify-content: space-around; /* Distribui os cards */
     }
 }
 
 /* Telas grandes - desktops maiores */
 @media (min-width: 1280px) {
     html {
-        font-size: 17px;
+        font-size: 17px; /* Fonte levemente maior */
     }
 
     .hero {
-        padding: 10vh 15vw;
+        padding: 10vh 15vw; /* Mais espaço nas laterais */
     }
 
     .hero h1 {
-        font-size: 3.5rem;
+        font-size: 3.5rem; /* Título grande */
     }
 
     .btn {
-        font-size: 1.1rem;
+        font-size: 1.1rem; /* Botão maior */
     }
 }

@@ -3,9 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title> FlyAway | Oficial</title>
+    <link rel="stylesheet" href="form.css">
+    <script src="https://kit.fontawesome.com/fec10f46ff.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="imagens/FlyAway-1.png" type="image/x-icon">
+
 </head>
 <body>
+    <div class="div-form">
+        <form action="">
+
+            <h2> Bem Vindo(a) de Volta </h2>
+            <p> Planeje Sua Nova Viajem! </p>
+
+            <label for="input-email">Email</label>
+            <input type="email" class="input-email dombosco" id="input-email" name="input-email"  placeholder="Insira seu e-mail" required > <br>
     
+            <label for="input-passaword">Senha</label>
+            <input type="password" class="input-passaword dombosco" id="input-passaword" name="input-passaword" placeholder="Digita sua senha" required > <br>
+    
+            <input type="submit" value="entrar" class="btn-form">
+
+            <a href="cadastro.html" class="cadastro-link">
+                <p>Não Possui Login? Clique aqui</p>
+            </a>
+        </form>
+    </div>
+    
+    <!-- Tag Para BTN libras -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+
+    
+    <!-- LABEl => usada como etiqueta para formulario (nome da caixa) peça fundamental para a construção de Formulário. O (For " " ) que é vinculado com ele servirá para especificar a qual input ele pertence. -->
+
+    <!-- Input  => Utilizao para especificar o tipo sw wntrada da informação (Text,passaword ...) Sempre lembrar que o input precisa ter um ID, Class e name para facilitar em ações futuras. -->
+
+    <!-- input type " submit " => Utilizando como butão. o type " submit " faz uma ação de envio das informações que se encontram dentro do formulario, snedo essencial para um formulario -->
 </body>
 </html>
