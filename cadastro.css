@@ -5,7 +5,7 @@
     list-style: none;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    font-family: "Playwrite HU", cursive;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Define fonte padrão */
 }
 
 html {
@@ -80,7 +80,7 @@ label {
     border-radius: 0.5rem;
     border: none;
     cursor: pointer;
-    transition: 0.3s;
+    transition: 0.5s;
 }
 
 .btn-form:hover {
