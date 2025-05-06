@@ -218,6 +218,7 @@ footer a:hover {
 
     .hero p {
         font-size: 1rem; /* Parágrafo menor */
+        margin: 25px;
     }
 
     header {
