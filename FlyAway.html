@@ -10,20 +10,55 @@
     <script src="https://kit.fontawesome.com/fec10f46ff.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
-    <header> <!-- Cabeçalho do site -->
-        <img src="imagens/FlyAway-1.png" alt="Logo da FlyAway"> <!-- Logo da empresa -->
+<script>
+   document.addEventListener('DOMContentLoaded', function() {
+    const hamburguer = document.querySelector('.hamburguer');
+    const menuNav = document.querySelector('.menu-nav');
 
-        <nav> <!-- Menu de navegação -->
+    if (hamburguer && menuNav) { // Verifica se os elementos existem
+        hamburguer.addEventListener('click', function() {
+            // Alterna classes
+            this.classList.toggle('active');
+            
+            menuNav.classList.toggle('active');
+            
+            // Bloqueia scroll quando menu aberto
+            document.body.style.overflow = menuNav.classList.contains('active') ? 'hidden' : 'auto';
+        });
+
+        // Fecha menu ao clicar nos links (opcional)
+        document.querySelectorAll('.menu-nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburguer.classList.remove('active');
+                menuNav.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            });
+        });
+    } else {
+        console.error("Elementos do menu não encontrados!");
+    }
+});
+</script>
+
+<body>
+    <header>
+        <img src="imagens/FlyAway-1.png" alt="Logo da FlyAway">
+
+        <!-- Botão hambúrguer - ESSENCIAL -->
+        <button class="hamburguer" aria-label="Menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+
+        <nav class="menu-nav">
             <ul>
-                <li><a href="#destinos">Destinos</a></li> <!-- Link âncora para a seção Destinos -->
-                <li><a href="#historia">História</a></li> <!-- Link âncora para a seção História -->
+                <li><a href="#destinos">Destinos</a></li>
+                <li><a href="#historia">História</a></li>
             </ul>
-            <a href="form.html"> <i class="fa-solid fa-circle-user"></i> </a>
-            <!-- Ícone de usuário que leva para um formulário -->
+            <a href="form.html" class="user-icon"><i class="fa-solid fa-circle-user"></i></a>
         </nav>
     </header>
-
     <main> <!-- Conteúdo principal da página -->
         <section class="hero"> <!-- Seção de destaque com chamada principal -->
             <h1>Viage com a FlyAway</h1>
@@ -173,7 +208,7 @@
         });
     </script>
 
-    
+
 </body>
 
 </html>

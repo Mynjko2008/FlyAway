@@ -18,50 +18,65 @@ body {
     line-height: 1.6; /* Espaçamento entre linhas */
 }
 
-/* HEADER */
+/* ===== HEADER PRINCIPAL ===== */
 header {
-    background-color: #2A9D8F; /* Cor de fundo do cabeçalho */
-    display: flex; /* Layout flexível */
-    justify-content: space-between; /* Espaço entre logo e navegação */
-    align-items: center; /* Alinha verticalmente */
-    padding: 1.25rem 5%; /* Espaçamento interno */
+    background-color: #2A9D8F;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 5%;
+    position: relative;
+    z-index: 1000;
 }
 
-header nav {
-    display: flex; /* Layout flexível para nav */
-    align-items: center; /* Alinha itens verticalmente */
-    gap: 1.5rem; /* Espaçamento entre elementos */
+/* ===== MENU HAMBÚRGUER ===== */
+.hamburguer {
+    display: none; /* Oculta em desktop */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1001;
 }
 
-header nav ul {
-    display: flex; /* Layout flexível para lista de navegação */
-    gap: 1rem; /* Espaço entre os links */
+.hamburguer .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 5px 0;
+    transition: all 0.3s ease;
 }
 
-header nav ul li a {
-    font-size: 1.3rem; /* Tamanho da fonte dos links */
-    color: white; /* Cor dos links */
-    text-decoration: none; /* Remove sublinhado */
+/* ===== MENU NAVEGAÇÃO ===== */
+.menu-nav {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
 }
 
-header nav ul li a:hover {
-    color: yellow; /* Cor ao passar o mouse */
-    transition: 0.5s; /* Transição suave */
+.menu-nav ul {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
 }
 
-header nav i {
-    font-size: 2rem; /* Tamanho dos ícones */
-    color: white; /* Cor do ícone */
-    cursor: pointer; /* Cursor de clique */
+.menu-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+.menu-nav ul li a:hover{
+    color: yellow;
+    transition: 0.5s;
 }
 
-header nav i:hover {
-    color: yellow; /* Cor ao passar o mouse no ícone */
-    transition: 0.5s; /* Transição suave */
+.user-icon i {
+    font-size: 1.5rem;
 }
-
-header img {
-    height: 3rem; /* Altura da logo */
+.user-icon i:hover{
+    color: yellow;
+    transition: 0.5s;
 }
 
 /* HERO SECTION */
@@ -230,6 +245,37 @@ footer a:hover {
         flex-direction: column; /* Coloca os cards um abaixo do outro */
         align-items: center; /* Centraliza os cards */
     }
+
+    .hamburguer {
+        display: block; /* Mostra o botão */
+    }
+    
+    .menu-nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 85%; /* Mais largo em smartphones */
+        height: 100vh;
+        background: #2A9D8F;
+        flex-direction: column;
+        justify-content: center;
+        transition: right 0.3s ease;
+        padding-top: 80px;
+    }
+    
+    .menu-nav.active {
+        right: 0;
+    }
+    
+    .menu-nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 2.5rem; /* Espaçamento maior */
+    }
+    
+    .user-icon i {
+        font-size: 1.8rem; /* Ícone maior */
+    }
 }
 
 /* Telas médias - tablets */
@@ -244,6 +290,33 @@ footer a:hover {
 
     .cards {
         justify-content: space-around; /* Distribui os cards */
+    }
+
+    .hamburguer {
+        display: block; /* Mostra o botão */
+    }
+    
+    .menu-nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 60%; /* Mais estreito que em smartphones */
+        height: 100vh;
+        background: #2A9D8F;
+        flex-direction: column;
+        justify-content: center;
+        transition: right 0.3s ease;
+        padding-top: 80px;
+    }
+    
+    .menu-nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem; /* Espaçamento menor */
+    }
+    
+    .user-icon i {
+        font-size: 1.5rem; /* Ícone proporcional */
     }
 }
 
@@ -264,4 +337,15 @@ footer a:hover {
     .btn {
         font-size: 1.1rem; /* Botão maior */
     }
+}
+
+/* ANIMAÇÃO DO BOTÃO (aplica a ambos) */
+.hamburguer.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburguer.active .bar:nth-child(2) {
+    opacity: 0;
+}
+.hamburguer.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
 }
