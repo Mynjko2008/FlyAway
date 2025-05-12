@@ -66,7 +66,8 @@ header {
     text-decoration: none;
     font-size: 1.1rem;
 }
-.menu-nav ul li a:hover{
+
+.menu-nav ul li a:hover {
     color: yellow;
     transition: 0.5s;
 }
@@ -74,7 +75,8 @@ header {
 .user-icon i {
     font-size: 1.5rem;
 }
-.user-icon i:hover{
+
+.user-icon i:hover {
     color: yellow;
     transition: 0.5s;
 }
@@ -221,40 +223,45 @@ footer a:hover {
     transition:  0.5s;  /* Efeito de transição para o hover */
 }
 
-/* Telas pequenas - smartphones */
+/* ========== SMARTPHONES (max-width: 768px) ========== */
 @media (max-width: 768px) {
+    /* Ajustes gerais */
     html {
-        font-size: 15px; /* Reduz tamanho da fonte */
+        font-size: 15px;
     }
 
     .hero h1 {
-        font-size: 2rem; /* Título menor */
+        font-size: 2rem;
     }
 
     .hero p {
-        font-size: 1rem; /* Parágrafo menor */
+        font-size: 1rem;
         margin: 25px;
     }
 
-    header {
-        flex-direction: column; /* Empilha os elementos */
-        text-align: center; /* Centraliza */
-    }
-
     .cards {
-        flex-direction: column; /* Coloca os cards um abaixo do outro */
-        align-items: center; /* Centraliza os cards */
+        flex-direction: column;
+        align-items: center;
     }
 
-    .hamburguer {
-        display: block; /* Mostra o botão */
+    /* HEADER: Logo e hambúrguer na mesma linha */
+    header {
+        flex-direction: row; /* Mantém em linha */
+        justify-content: space-between;
+        padding: 1rem 5%;
     }
-    
+
+    /* Menu hambúrguer visível */
+    .hamburguer {
+        display: block;
+    }
+
+    /* Menu-nav (oculto por padrão, aparece com JS) */
     .menu-nav {
         position: fixed;
         top: 0;
         right: -100%;
-        width: 85%; /* Mais largo em smartphones */
+        width: 85%;
         height: 100vh;
         background: #2A9D8F;
         flex-direction: column;
@@ -262,45 +269,53 @@ footer a:hover {
         transition: right 0.3s ease;
         padding-top: 80px;
     }
-    
+
     .menu-nav.active {
         right: 0;
     }
-    
+
     .menu-nav ul {
         flex-direction: column;
-        align-items: center;
-        gap: 2.5rem; /* Espaçamento maior */
+        gap: 2.5rem;
     }
-    
+
     .user-icon i {
-        font-size: 1.8rem; /* Ícone maior */
+        font-size: 1.8rem;
     }
 }
 
-/* Telas médias - tablets */
+/* ========== TABLETS (769px - 1024px) ========== */
 @media (min-width: 769px) and (max-width: 1024px) {
+    /* Ajustes gerais */
     html {
-        font-size: 16px; /* Fonte padrão */
+        font-size: 16px;
     }
 
     .hero h1 {
-        font-size: 2.25rem; /* Título médio */
+        font-size: 2.25rem;
     }
 
     .cards {
-        justify-content: space-around; /* Distribui os cards */
+        justify-content: space-around;
     }
 
-    .hamburguer {
-        display: block; /* Mostra o botão */
+    /* HEADER: Logo e hambúrguer na mesma linha */
+    header {
+        flex-direction: row; /* Mantém em linha */
+        justify-content: space-between;
     }
-    
+
+    /* Menu hambúrguer visível */
+    .hamburguer {
+        display: block;
+    }
+
+    /* Menu-nav (oculto por padrão, aparece com JS) */
     .menu-nav {
         position: fixed;
         top: 0;
         right: -100%;
-        width: 60%; /* Mais estreito que em smartphones */
+        width: 60%;
         height: 100vh;
         background: #2A9D8F;
         flex-direction: column;
@@ -308,17 +323,21 @@ footer a:hover {
         transition: right 0.3s ease;
         padding-top: 80px;
     }
-    
+
+    .menu-nav.active {
+        right: 0;
+    }
+
     .menu-nav ul {
         flex-direction: column;
-        align-items: center;
-        gap: 2rem; /* Espaçamento menor */
+        gap: 2rem;
     }
-    
+
     .user-icon i {
-        font-size: 1.5rem; /* Ícone proporcional */
+        font-size: 1.5rem;
     }
 }
+
 
 /* Telas grandes - desktops maiores */
 @media (min-width: 1280px) {
