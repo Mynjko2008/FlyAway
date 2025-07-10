@@ -1,36 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> FlyAway | Oficial</title>
+    <title>FlyAway | Login</title>
     <link rel="stylesheet" href="login.css">
     <script src="https://kit.fontawesome.com/fec10f46ff.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="imagens/FlyAway-1.png" type="image/x-icon">
-
 </head>
+
 <body>
     <div class="div-form">
-        <form action="../Back-End/login.php" method="POST">
-
-            <h2>Bem Vindo(a) de Volta</h2>
-            <p>Planeje Sua Nova Viajem!</p>
+        <form action="../Back-End/login.php" method="POST" autocomplete="on">
+            <h2>Bem-vindo(a) de volta</h2>
+            <p>Planeje sua nova viagem!</p>
 
             <label for="input-email">Email</label>
-            <input type="email" class="input-email dombosco" id="input-email" name="input-email"  placeholder="Insira seu e-mail" required > <br>
-    
+            <input type="email" class="dombosco" id="input-email" name="input-email" placeholder="Insira seu e-mail"
+                required autocomplete="email">
+
             <label for="input-passaword">Senha</label>
-            <input type="password" class="input-passaword dombosco" id="input-passaword" name="input-passaword" placeholder="Digita sua senha" required > <br>
-    
-            <input type="submit" value="entrar" class="btn-form">
+            <div class="senha-container">
+                <input type="password" class="input-passaword dombosco" id="input-passaword" name="input-passaword"
+                    placeholder="Digite sua senha" required maxlength="15">
+                <i class="fa-solid fa-eye toggle-password" data-target="input-passaword"></i>
+            </div>
+
+            <input type="submit" value="Entrar" class="btn-form">
 
             <a href="cadastro.html" class="cadastro-link">
-                <p>Não Possui Login? Clique aqui</p>
+                <p>Não possui login? Clique aqui</p>
+            </a>
+
+            <a href="esqueceu.html" class="esqueceu-link">
+                <p>Esqueci minha senha</p>
             </a>
         </form>
     </div>
-    
-    <!-- Tag Para BTN libras -->
+
+    <!-- Plugin VLibras -->
     <div vw class="enabled">
         <div vw-access-button class="active"></div>
         <div vw-plugin-wrapper>
@@ -41,13 +50,6 @@
     <script>
         new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
-
-
-    
-    <!-- LABEl => usada como etiqueta para formulario (nome da caixa) peça fundamental para a construção de Formulário. O (For " " ) que é vinculado com ele servirá para especificar a qual input ele pertence. -->
-
-    <!-- Input  => Utilizao para especificar o tipo sw wntrada da informação (Text,passaword ...) Sempre lembrar que o input precisa ter um ID, Class e name para facilitar em ações futuras. -->
-
-    <!-- input type " submit " => Utilizando como butão. o type " submit " faz uma ação de envio das informações que se encontram dentro do formulario, snedo essencial para um formulario -->
 </body>
+
 </html>

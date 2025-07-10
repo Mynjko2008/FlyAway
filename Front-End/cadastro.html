@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,6 +9,7 @@
   <script src="https://kit.fontawesome.com/fec10f46ff.js" crossorigin="anonymous"></script>
   <link rel="shortcut icon" href="imagens/FlyAway-1.png" type="image/x-icon" />
 </head>
+
 <body>
   <div class="div-form">
     <form action="../Back-End/cadastro.php" method="POST" autocomplete="on">
@@ -15,20 +17,30 @@
       <p>Preencha os dados abaixo para criar sua conta</p>
 
       <label for="input-nome">Nome Completo</label>
-      <input type="text" class="dombosco" id="input-nome" name="input-nome" placeholder="Insira seu nome completo" required autocomplete="name" />
+      <input type="text" class="dombosco" id="input-nome" name="input-nome" placeholder="Insira seu nome completo"
+        required autocomplete="name" />
 
       <label for="input-email">Email</label>
-      <input type="email" class="dombosco" id="input-email" name="input-email" placeholder="Insira seu e-mail" required autocomplete="email" />
+      <input type="email" class="dombosco" id="input-email" name="input-email" placeholder="Insira seu e-mail" required
+        autocomplete="email" />
 
       <label for="input-telefone">Telefone</label>
-      <input type="tel" class="dombosco" id="input-telefone" name="input-telefone" placeholder="Insira seu telefone" required autocomplete="tel" />
+      <input type="tel" class="dombosco" id="input-telefone" name="input-telefone" placeholder="Insira seu telefone"
+        required autocomplete="tel" />
 
       <label for="input-senha">Senha</label>
-      <input type="password" class="dombosco" id="input-senha" name="input-senha" placeholder="Crie uma senha" required/>
+      <div class="senha-container">
+        <input type="password" id="input-senha" class="dombosco" name="input-senha" placeholder="Crie uma senha"
+          required maxlength="15">
+        <i class="fa-solid fa-eye toggle-password" data-target="input-senha"></i>
+      </div>
 
       <label for="input-confirmar-senha">Confirmar Senha</label>
-      <input type="password" class="dombosco" id="input-confirmar-senha" name="input-confirmar-senha" placeholder="Confirme sua senha" required/>
-
+      <div class="senha-container">
+        <input type="password" id="input-confirmar-senha" name="input-confirmar-senha" class="dombosco"
+          placeholder="Confirme sua senha" required maxlength="15" autocomplete="current-password">
+        <i class="fa-solid fa-eye toggle-password" data-target="input-confirmar-senha"></i>
+      </div>
       <input type="submit" value="Cadastrar" class="btn-form" />
 
       <a href="login.html" class="form">
@@ -49,4 +61,5 @@
     new window.VLibras.Widget('https://vlibras.gov.br/app');
   </script>
 </body>
+
 </html>

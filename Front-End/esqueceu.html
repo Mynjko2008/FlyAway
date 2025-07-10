@@ -1,35 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>FlyAway | Redefinir Senha</title>
+    <link rel="stylesheet" href="esqueceu.css">
+    <script src="https://kit.fontawesome.com/fec10f46ff.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="imagens/FlyAway-1.png" type="image/x-icon">
 </head>
+
 <body>
-    <form action="../Back-end/redefinir_senha.php" method="POST">
-        <h1>Bem Vindo(a) à tela de redefinição de senha</h1>
-        <p>Digite a sua nova senha!!!</p>
+    <div class="div-form">
+        <form action="../Back-end/redefinir_senha.php" method="POST" autocomplete="on">
+            <h1>Bem Vindo(a) à tela de redefinição de senha</h1>
+            <p>Digite a sua nova senha!!!</p>
 
-        <label for="input-nome">Nome Completo</label>
-        <input type="text" id="input-nome" name="input-nome" placeholder="Insira seu nome completo" required>
+            <label for="input-nome">Nome Completo</label>
+            <input type="text" id="input-nome" class="dombosco" name="input-nome" placeholder="Insira seu nome completo"
+                required>
 
-        <label for="input-email">Email</label>
-        <input type="email" id="input-email" name="input-email" placeholder="Insira seu e-mail" required>
+            <label for="input-email">Email</label>
+            <input type="email" id="input-email" class="dombosco" name="input-email" placeholder="Insira seu e-mail"
+                required>
 
-        <label for="input-senha">Senha</label>
-        <div class="senha-container">
-           <input type="password" id="input-senha" name="input-senha" placeholder="Crie uma senha" required maxlength="15">
-            <i class="fa-solid fa-eye toggle-password" data-target="input-senha"></i>
-        </div>
+            <label for="input-senha">Senha</label>
+            <div class="senha-container">
+                <input type="password" id="input-senha" class="dombosco" name="input-senha" placeholder="Crie uma senha"
+                    required maxlength="15">
+                <i class="fa-solid fa-eye toggle-password" data-target="input-senha"></i>
+            </div>
 
-        <label for="input-confirmar-senha">Confirmar Senha</label>
-        <div class="senha-container">
-            <input type="password" id="input-confirmar-senha" name="input-confirmar-senha"
-                placeholder="Confirme sua senha" required maxlength="15">
-            <i class="fa-solid fa-eye toggle-password" data-target="input-confirmar-senha"></i>
-        </div>
+            <label for="input-confirmar-senha">Confirmar Senha</label>
+            <div class="senha-container">
+                <input type="password" id="input-confirmar-senha" name="input-confirmar-senha" class="dombosco"
+                    placeholder="Confirme sua senha" required maxlength="15" autocomplete="current-password">
+                <i class="fa-solid fa-eye toggle-password" data-target="input-confirmar-senha"></i>
+            </div>
 
-        <input type="submit" value="Trocar Senha" class="btn-form">
-    </form>
+            <input type="submit" value="Trocar Senha" class="btn-form">
+        </form>
+    </div>
 </body>
+
 </html>

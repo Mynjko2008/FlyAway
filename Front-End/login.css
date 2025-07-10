@@ -1,80 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        list-style: none;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Define fonte padrão */
-    }
+body {
+    background-color: #FAF9F6;
+    color: #264653;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 1rem;
+}
 
-    body {
-        background-color: #FAF9F6;
-        color: #264653;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        padding: 1rem;
-    }
+.div-form {
+    background-color: #2A9D8F;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 420px;
+}
 
-    .container {
-        max-width: 420px;
-        width: 100%;
-    }
+form {
+    display: flex;
+    flex-direction: column;
+}
 
-    .div-form {
-        background-color: #2A9D8F;
-        padding: 2rem;
-        border-radius: 1rem;
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    }
+label {
+    margin-bottom: 0.25rem;
+    font-weight: bold;
+    color: #FFFFFF;
+}
 
-    form {
-        display: flex;
-        flex-direction: column;
-    }
+.dombosco {
+    padding: 0.75rem;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    border: 2px solid #fa1905;
+    outline: none;
+    color: #264653;
+    width: 100%;
+    background-color: #fff;
+}
 
-    label {
-        margin-bottom: 0.25rem;
-        font-weight: bold;
-        color: #FFFFFF;
-    }
+.dombosco::placeholder {
+    color: #888;
+}
 
-    input[type="email"],
-    input[type="password"] {
-        padding: 0.75rem;
-        margin-bottom: 1.5rem;
-        font-size: 1rem;
-        border-radius: 0.5rem;
-        border: 2px solid #fa1905;
-        outline: none;
-        color: #264653;
-    }
+.btn-form {
+    background-color: #fa1905;
+    color: white;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: 0.5s;
+}
 
-    input[type="email"]::placeholder,
-    input[type="password"]::placeholder {
-        color: #888;
-    }
+.btn-form:hover {
+    background-color: #F76C5E;
+}
 
-    .btn-form {
-        background-color:  #fa1905;
-        color: white;
-        padding: 0.75rem;
-        font-size: 1rem;
-        border: none;
-        border-radius: 0.5rem;
-        cursor: pointer;
-        transition:  0.5s;
-    }
+h2, p {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #FFFFFF;
+}
 
-    .btn-form:hover {
-        background-color: #F76C5E;
-    }
+h2 {
+    font-size: 2rem;
+}
 
-    h2, p {
-        text-align: center;
-        margin-bottom: 1rem;
-        color: #FFFFFF;
+p {
+    font-size: 1.2rem;
+}
+
+/* Olho da senha */
+.senha-container {
+    position: relative;
+}
+
+.senha-container .toggle-password {
+    position: absolute;
+    top: 35%;
+    transform: translateY(-50%);
+    right: 10px; /* Ajuste conforme o padding do input */
+    cursor: pointer;
+    color: #333;
+}
+
+.cadastro-link,
+.esqueceu-link {
+    display: block;
+    text-align: center;
+    margin-top: 1rem;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+.cadastro-link p:hover,
+.esqueceu-link p:hover {
+    color: yellow;
+    transition: 0.5s;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    html {
+        font-size: 15px;
     }
 
     h2 {
@@ -82,75 +122,43 @@
     }
 
     p {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
-    .cadastro-link {
-        display: block;
-        text-align: center;
-        margin-top: 1rem;
-        text-decoration: none;
-        color: #FFFFFF;
-        font-weight: bold;
+    .div-form {
+        width: 90%;
+        padding: 1.5rem;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    html {
+        font-size: 16px;
     }
 
-    .cadastro-link p:hover {
-        color: yellow;
-        transition: 0.5s;
+    h2 {
+        font-size: 2.25rem;
     }
 
-    /* Telas pequenas - smartphones */
-    @media (max-width: 768px) {
-        html {
-            font-size: 15px;
-        }
-    
-        h2 {
-            font-size: 2rem;
-        }
-    
-        p {
-            font-size: 1rem;
-        }
-    
-        .div-form {
-            width: 90%;
-            padding: 1.5rem;
-        }
+    .div-form {
+        width: 85%;
     }
-    
-    /* Telas médias - tablets */
-    @media (min-width: 769px) and (max-width: 1024px) {
-        html {
-            font-size: 16px;
-        }
-    
-        h2 {
-            font-size: 2.25rem;
-        }
-    
-        .div-form {
-            width: 85%;
-        }
-    }
-    
-    /* Telas grandes - desktops maiores */
-    @media (min-width: 1280px) {
-        html {
-            font-size: 17px;
-        }
-    
-        .div-form {
-            padding: 3rem;
-        }
-    
-        h2 {
-            font-size: 2.5rem;
-        }
-    
-        .btn-form {
-            font-size: 1.1rem;
-        }
-    }
-    
+}
 
+@media (min-width: 1280px) {
+    html {
+        font-size: 17px;
+    }
+
+    .div-form {
+        padding: 3rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    .btn-form {
+        font-size: 1.1rem;
+    }
+}

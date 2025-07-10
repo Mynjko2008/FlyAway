@@ -87,6 +87,20 @@ label {
   background-color: #C1432E;
 }
 
+/* Olho da senha */
+.senha-container {
+    position: relative;
+}
+
+.senha-container .toggle-password {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    right: 10px; /* Ajuste conforme o padding do input */
+    cursor: pointer;
+    color: #333;
+}
+
 /* Link */
 .form {
   font-size: 0.95rem;

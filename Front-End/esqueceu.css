@@ -1,0 +1,149 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: #FAF9F6;
+  color: #264653;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Form Container */
+.div-form {
+  background-color: #2A9D8F;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 500px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+h1, p {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #FFFFFF;
+}
+
+h1 {
+  font-size: 2.25rem;
+  text-transform: capitalize;
+}
+
+p {
+  font-size: 1.25rem;
+}
+
+label {
+  margin-bottom: 0.25rem;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+
+/* Inputs */
+.dombosco {
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  border: 2px solid #fa1905;
+  background-color: #fff;
+  color: #264653;
+  outline: none;
+  width: 100%;
+}
+.dombosco::placeholder {
+  color: #888;
+}
+
+/* Olho da senha */
+.senha-container {
+    position: relative;
+}
+
+.senha-container .toggle-password {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    right: 10px; /* Ajuste conforme o padding do input */
+    cursor: pointer;
+    color: #333;
+}
+
+/* Botão */
+.btn-form {
+  background-color: #fa1905;
+  color: #FFFFFF;
+  font-weight: bold;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.btn-form:hover {
+  background-color: #C1432E;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .div-form {
+    width: 90%;
+    padding: 1.5rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .div-form {
+    width: 85%;
+  }
+}
+
+@media (min-width: 1280px) {
+  html {
+    font-size: 17px;
+  }
+
+  .div-form {
+    padding: 3rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .btn-form {
+    font-size: 1.1rem;
+  }
+}
