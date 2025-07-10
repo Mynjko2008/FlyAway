@@ -25,7 +25,8 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 1.25rem 5%;
-    position: relative;
+    position: sticky; /* Fixa o header no topo */
+    top: 0; /* Fixa no topo da página */
     z-index: 1000;
 }
 
