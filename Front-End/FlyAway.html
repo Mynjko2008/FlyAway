@@ -8,33 +8,34 @@
     <link rel="stylesheet" href="FlyAway.css">
     <link rel="shortcut icon" href="imagens/FlyAway-1.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/fec10f46ff.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
     <header>
         <img src="imagens/FlyAway-1.png" alt="Logo da FlyAway">
-
-        <!-- Botão hambúrguer - ESSENCIAL -->
         <button class="hamburguer" aria-label="Menu">
             <span class="bar"></span>
             <span class="bar"></span>
             <span class="bar"></span>
         </button>
-
         <nav class="menu-nav">
             <ul>
-                <li><a href="#destinos">Destinos</a></li>
                 <li><a href="#historia">História</a></li>
+                <li><a href="#destinos">Destinos</a></li>
+                <li><a href="#pacotes">Pacotes</a></li>
+                <li><a href="#depoimentos">Depoimentos</a></li>
+                <li><a href="#diferenciais">Diferenciais</a></li>
             </ul>
             <a href="login.html" class="user-icon"><i class="fa-solid fa-circle-user"></i></a>
         </nav>
     </header>
+
     <main>
-        <!-- Conteúdo principal da página -->
-        <section class="hero"> <!-- Seção de destaque com chamada principal -->
+        <section class="hero">
             <h1>Viage com a FlyAway</h1>
             <p>Descubra destinos incríveis com conforto e praticidade.</p>
-            <a href="#pacotes" class="btn">Ver Pacotes</a> <!-- Botão que leva para a seção de pacotes -->
+            <a href="#pacotes" class="btn">Ver Pacotes</a>
         </section>
 
         <section class="chamada-cadastro">
@@ -43,92 +44,91 @@
             <a href="cadastro.html" class="btn">Cadastre-se Agora</a>
         </section>
 
-          <section id="historia" class="historia"> <!-- Seção com a história da empresa -->
+        <section id="historia" class="historia">
             <h2>Nossa História</h2>
-            <p> FlyAway nasceu com o sonho de transformar viagens em experiências inesquecíveis. Começamos com uma
+            <p>A FlyAway nasceu com o sonho de transformar viagens em experiências inesquecíveis. Começamos com uma
                 pequena equipe apaixonada por explorar o mundo e, com o tempo, nos tornamos referência em turismo
                 acessível, seguro e personalizado. Hoje, ajudamos milhares de pessoas a realizarem suas viagens dos
                 sonhos, com conforto e tranquilidade.</p>
         </section>
 
-        <section id="destinos" class="destinos"> <!-- Seção com os destinos populares -->
+        <section id="destinos" class="destinos" data-aos="fade-left">
             <h2>Destinos Populares</h2>
-            <div class="cards"> <!-- Container para os cards de destino -->
-
+            <div class="cards">
                 <!-- Cada article abaixo é um card com imagem, título e descrição -->
-                <article class="card">
+                <article class="card" data-aos="fade-up" data-aos-delay="0">
                     <img src="imagens/paris.jpg" alt="Paris">
                     <h2>Paris</h2>
                     <p>A cidade do amor espera por você!</p>
                     <button class="btn-modal" data-modal="modal-paris">Saiba mais</button>
                 </article>
-                <article class="card">
+                <article class="card" data-aos="fade-down" data-aos-delay="100">
                     <img src="imagens/rio.jpg" alt="Rio de Janeiro">
                     <h2>Rio de Janeiro</h2>
                     <p>Sol, praia e alegria o ano todo!</p>
                     <button class="btn-modal" data-modal="modal-rio">Saiba mais</button>
                 </article>
-                <article class="card">
+                <article class="card" data-aos="zoom-in" data-aos-delay="200">
                     <img src="imagens/floresta.jpg" alt="Floresta Amazonica">
                     <h2>Floresta Amazonica</h2>
                     <p>Aventura e natureza no coração da floresta!</p>
                     <button class="btn-modal" data-modal="modal-floresta">Saiba mais</button>
                 </article>
-                <article class="card">
+                <article class="card" data-aos="zoom-in-up" data-aos-delay="300">
                     <img src="imagens/buenos.jpg" alt="Buenos aires">
                     <h2>Buenos Aires</h2>
                     <p>Cultura, tango e charme argentino!</p>
                     <button class="btn-modal" data-modal="modal-buenos">Saiba mais</button>
                 </article>
-                <article class="card">
+                <article class="card" data-aos="flip-left" data-aos-delay="400">
                     <img src="imagens/tokyo.jpg" alt="Tokyo">
                     <h2>Tokyo</h2>
                     <p>A cidade das tecnologias espera por você!</p>
                     <button class="btn-modal" data-modal="modal-tokyo">Saiba mais</button>
                 </article>
-                <article class="card">
+                <article class="card" data-aos="flip-right" data-aos-delay="500">
                     <img src="imagens/londres.jpg" alt="Londres">
                     <h2>Londres</h2>
                     <p>Descubra o charme e a história de Londres - uma cidade que nunca para!</p>
                     <button class="btn-modal" data-modal="modal-londres">Saiba mais</button>
                 </article>
-                <article class="card">
+                <article class="card" data-aos="fade-right" data-aos-delay="600">
                     <img src="imagens/sydney.jpg" alt="Sydney">
                     <h2>Sydney</h2>
                     <p>Solta o espírito aventureiro na terra dos cangurus e das praias incríveis!</p>
                     <button class="btn-modal" data-modal="modal-sydney">Saiba mais</button>
                 </article>
-                <article class="card">
+                <article class="card" data-aos="fade-left" data-aos-delay="700">
                     <img src="imagens/nova-york.jpg" alt="Nova York">
                     <h2>Nova York</h2>
                     <p>A cidade que nunca dorme te convida para viver intensamente!</p>
                     <button class="btn-modal" data-modal="modal-nova-york">Saiba mais</button>
                 </article>
-                <article class="card">
+                <article class="card" data-aos="zoom-out" data-aos-delay="800">
                     <img src="imagens/roma.jpg" alt="Roma">
                     <h2>Roma</h2>
                     <p>Reviva a grandiosidade do Império Romano!</p>
                     <button class="btn-modal" data-modal="modal-roma">Saiba mais</button>
                 </article>
-                <article class="card">
+                <article class="card" data-aos="flip-up" data-aos-delay="900">
                     <img src="imagens/cancun.jpg" alt="Cancún">
                     <h2>Cancún</h2>
                     <p>Praias paradisíacas, resorts de luxo e mar cristalino!</p>
                     <button class="btn-modal" data-modal="modal-cancun">Saiba mais</button>
                 </article>
-                <article class="card">
+                <article class="card" data-aos="flip-down" data-aos-delay="1000">
                     <img src="imagens/dubai.jpg" alt="Dubai">
                     <h2>Dubai</h2>
                     <p>Luxo e inovação em meio ao deserto!</p>
                     <button class="btn-modal" data-modal="modal-dubai">Saiba mais</button>
                 </article>
-                <article class="card">
+                <article class="card" data-aos="zoom-in-right" data-aos-delay="1100">
                     <img src="imagens/cairo.jpg" alt="Cairo">
                     <h2>Cairo</h2>
                     <p>Explore as pirâmides e os mistérios do Antigo Egito!</p>
                     <button class="btn-modal" data-modal="modal-cairo">Saiba mais</button>
                 </article>
-                <article class="card">
+                <article class="card" data-aos="zoom-in-left" data-aos-delay="1200">
                     <img src="imagens/atenas.jpg" alt="Atenas">
                     <h2>Atenas</h2>
                     <p>Berço da civilização ocidental!</p>
@@ -282,10 +282,9 @@
             </div>
         </div>
 
-        <section id="pacotes" class="pacotes"> <!-- Seção com lista de pacotes especiais -->
+        <section id="pacotes" class="pacotes" data-aos="fade-up">
             <h2>Pacotes Especiais</h2>
-            <ul> <!-- Lista não ordenada com os pacotes -->
-                <!-- Cada item representa um pacote com nome, duração e preço -->
+            <ul>
                 <li> <strong> Pacote Europa Clássica </strong> - 15 dias | R$ 15.000,00 </li>
                 <li> <strong> Nordeste Relax </strong> - 9 dias | R$ 8.500,00 </li>
                 <li> <strong> Aventura Amazonica </strong> - 9 dias | R$ 6.000,00 </li>
@@ -302,11 +301,41 @@
                 <li> <strong> Ilhas Gregas </strong> - 10 dias | R$ 14.000,00 </li>
             </ul>
         </section>
+
+        <section id="depoimentos" class="depoimentos" data-aos="fade-up" data-aos-delay="100">
+            <h2>O que nossos viajantes dizem</h2>
+            <div class="cards">
+                <article class="card" data-aos="zoom-in-right">
+                    <img src="imagens/depo1.jpg" alt="Depoimento de Ana">
+                    <h3>Ana Souza</h3>
+                    <p>"Viajar com a FlyAway foi a melhor escolha da minha vida!"</p>
+                </article>
+                <article class="card" data-aos="zoom-in-up">
+                    <img src="imagens/depo2.jpg" alt="Depoimento de João">
+                    <h3>João Pedro</h3>
+                    <p>"Fui para o Japão com eles e tudo correu perfeitamente."</p>
+                </article>
+                <article class="card" data-aos="zoom-in-left">
+                    <img src="imagens/depo3.png" alt="Depoimento de Carla">
+                    <h3>Carla Mendes</h3>
+                    <p>"Já viajei com várias agências, mas nenhuma se compara à FlyAway."</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="diferenciais" id="diferenciais" data-aos="fade-down" data-aos-offset="200">
+            <h2>Por que escolher a FlyAway?</h2>
+            <ul>
+                <li>✔️ Atendimento 24 horas</li>
+                <li>✔️ Parcelamento em até 12x</li>
+                <li>✔️ Roteiros personalizados</li>
+                <li>✔️ Parcerias com hotéis 4 e 5 estrelas</li>
+            </ul>
+        </section>
     </main>
 
     <footer>
         <p>&copy; 2025 FlyAway Viagens. Todos os direitos reservados.</p>
-        <!-- Links para as redes sociais da FlyAway -->
         <p>
             <a href="https://www.instagram.com" target="_blank">Instagram</a> |
             <a href="https://wa.me" target="_blank">WhatsApp</a> |
@@ -323,28 +352,18 @@
     </div>
     <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
     <script>
-        new window.VLibras.Widget('https://vlibras.gov.br/app'); // Inicializa o plugin VLibras
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
 
-    <!-- Script para rolagem suave entre seções -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
-        document.querySelectorAll('a[href^="#"]').forEach(link => {
-            link.addEventListener('click', function (e) {
-                e.preventDefault(); // Impede o comportamento padrão de pular diretamente
-                const targetId = this.getAttribute('href').substring(1); // Pega o ID do destino
-                const section = document.getElementById(targetId); // Seleciona o elemento com o ID
-                if (section) {
-                    section.scrollIntoView({ behavior: 'smooth' }); // Faz a rolagem suave até a seção
-
-                    // Remove o "#" da URL sem recarregar a página
-                    history.pushState(null, null, window.location.pathname);
-                }
-            });
+        AOS.init({
+            duration: 800,
+            once: false,
+            mirror: true
         });
     </script>
-
     <script src="FlyAway.js"></script>
-
 </body>
 
 </html>

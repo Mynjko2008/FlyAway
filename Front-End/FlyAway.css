@@ -88,21 +88,24 @@ header {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed; /* Aqui está o efeito parallax */
+    background-attachment: fixed;
+
     color: #FFFFFF;
     text-align: center;
     padding: 20vh 5vw;
     position: relative;
+    overflow: hidden; /* Prevê vazamentos */
+    isolation: isolate; /* Garante empilhamento correto */
 }
 
 .hero::before {
     content: "";
     position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(0,0,0,0.5); /* Sobreposição escura */
-    z-index: 0;
+    inset: 0; /* Equivalente a top: 0; right: 0; bottom: 0; left: 0 */
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1; /* Fica abaixo dos elementos */
 }
+
 
 .hero h1, .hero p, .hero .btn {
     position: relative;
@@ -126,10 +129,12 @@ header {
 
 /* CHAMADA PARA CADASTRO */
 .chamada-cadastro {
-    background-color: #2A9D8F;
+    background-color: #1e7e73;
     color: white;
     text-align: center;
     padding: 4rem 5%;
+    overflow: hidden; /* Previne qualquer estouro visual */
+    position: relative;
 }
 
 .chamada-cadastro h2 {
@@ -284,6 +289,79 @@ section {
     text-align: center; /* Centraliza texto */
 }
 
+/* SEÇÃO DEPOIMENTOS */
+.depoimentos {
+    padding: 4rem 5%;
+    text-align: center;
+}
+
+.depoimentos h2 {
+    font-size: 2rem;
+    color: #2A9D8F;
+    margin-bottom: 2rem;
+}
+
+.depoimentos .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.depoimentos .card {
+    background-color: #ffffff;
+    max-width: 300px;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.depoimentos .card:hover {
+    transform: scale(1.05);
+}
+
+.depoimentos .card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.depoimentos .card h3 {
+    color: #264653;
+    padding: 1rem 0 0.5rem;
+    font-size: 1.25rem;
+}
+
+.depoimentos .card p {
+    padding: 0 1rem 1.5rem;
+    font-size: 1rem;
+    color: #555;
+}
+
+/* SEÇÃO DIFERENCIAIS */
+.diferenciais {
+    background-color: #225f77; /* Cor de fundo */
+    color: #FFFFFF; /* Cor do texto */
+    padding: 4rem 5%; /* Espaçamento interno */
+    text-align: center; /* Centraliza o texto */
+}
+.diferenciais h2 {
+    text-align: center; /* Centraliza o título */
+    color: #05f5d9; /* Cor do título */
+    font-size: 2rem; /* Tamanho do título */
+    margin-bottom: 1.5rem; /* Espaço abaixo do título */
+}
+.diferenciais ul {
+    list-style: none; /* Remove marcadores */
+    font-size: 1.2rem; /* Tamanho da fonte */
+    padding-left: 1.25rem; /* Recuo esquerdo */
+}
+
+.diferenciais li {
+    margin-bottom: 1rem; /* Espaço entre itens */
+}
+
 /* FOOTER */
 footer {
     background-color: #264653;  /* Cor de fundo do rodapé */
@@ -365,6 +443,10 @@ footer a:hover {
 
     .user-icon i {
         font-size: 1.8rem;
+    }
+
+    .hero {
+        background-attachment: scroll;
     }
 }
 
