@@ -10,36 +10,6 @@
     <script src="https://kit.fontawesome.com/fec10f46ff.js" crossorigin="anonymous"></script>
 </head>
 
-<script>
-   document.addEventListener('DOMContentLoaded', function() {
-    const hamburguer = document.querySelector('.hamburguer');
-    const menuNav = document.querySelector('.menu-nav');
-
-    if (hamburguer && menuNav) { // Verifica se os elementos existem
-        hamburguer.addEventListener('click', function() {
-            // Alterna classes
-            this.classList.toggle('active');
-            
-            menuNav.classList.toggle('active');
-            
-            // Bloqueia scroll quando menu aberto
-            document.body.style.overflow = menuNav.classList.contains('active') ? 'hidden' : 'auto';
-        });
-
-        // Fecha menu ao clicar nos links (opcional)
-        document.querySelectorAll('.menu-nav a').forEach(link => {
-            link.addEventListener('click', () => {
-                hamburguer.classList.remove('active');
-                menuNav.classList.remove('active');
-                document.body.style.overflow = 'auto';
-            });
-        });
-    } else {
-        console.error("Elementos do menu não encontrados!");
-    }
-});
-</script>
-
 <body>
     <header>
         <img src="imagens/FlyAway-1.png" alt="Logo da FlyAway">
@@ -59,14 +29,27 @@
             <a href="login.html" class="user-icon"><i class="fa-solid fa-circle-user"></i></a>
         </nav>
     </header>
-    <main> <!-- Conteúdo principal da página -->
+    <main>
+        <!-- Conteúdo principal da página -->
         <section class="hero"> <!-- Seção de destaque com chamada principal -->
             <h1>Viage com a FlyAway</h1>
             <p>Descubra destinos incríveis com conforto e praticidade.</p>
             <a href="#pacotes" class="btn">Ver Pacotes</a> <!-- Botão que leva para a seção de pacotes -->
         </section>
 
-        <section></section>
+        <section class="chamada-cadastro">
+            <h2>Pronto para sua próxima aventura?</h2>
+            <p>Crie uma conta agora mesmo e aproveite os melhores pacotes exclusivos da FlyAway!</p>
+            <a href="cadastro.html" class="btn">Cadastre-se Agora</a>
+        </section>
+
+          <section id="historia" class="historia"> <!-- Seção com a história da empresa -->
+            <h2>Nossa História</h2>
+            <p> FlyAway nasceu com o sonho de transformar viagens em experiências inesquecíveis. Começamos com uma
+                pequena equipe apaixonada por explorar o mundo e, com o tempo, nos tornamos referência em turismo
+                acessível, seguro e personalizado. Hoje, ajudamos milhares de pessoas a realizarem suas viagens dos
+                sonhos, com conforto e tranquilidade.</p>
+        </section>
 
         <section id="destinos" class="destinos"> <!-- Seção com os destinos populares -->
             <h2>Destinos Populares</h2>
@@ -77,69 +60,227 @@
                     <img src="imagens/paris.jpg" alt="Paris">
                     <h2>Paris</h2>
                     <p>A cidade do amor espera por você!</p>
+                    <button class="btn-modal" data-modal="modal-paris">Saiba mais</button>
                 </article>
                 <article class="card">
                     <img src="imagens/rio.jpg" alt="Rio de Janeiro">
                     <h2>Rio de Janeiro</h2>
                     <p>Sol, praia e alegria o ano todo!</p>
+                    <button class="btn-modal" data-modal="modal-rio">Saiba mais</button>
                 </article>
                 <article class="card">
                     <img src="imagens/floresta.jpg" alt="Floresta Amazonica">
                     <h2>Floresta Amazonica</h2>
                     <p>Aventura e natureza no coração da floresta!</p>
+                    <button class="btn-modal" data-modal="modal-floresta">Saiba mais</button>
                 </article>
                 <article class="card">
                     <img src="imagens/buenos.jpg" alt="Buenos aires">
                     <h2>Buenos Aires</h2>
                     <p>Cultura, tango e charme argentino!</p>
+                    <button class="btn-modal" data-modal="modal-buenos">Saiba mais</button>
                 </article>
                 <article class="card">
                     <img src="imagens/tokyo.jpg" alt="Tokyo">
                     <h2>Tokyo</h2>
                     <p>A cidade das tecnologias espera por você!</p>
+                    <button class="btn-modal" data-modal="modal-tokyo">Saiba mais</button>
                 </article>
                 <article class="card">
                     <img src="imagens/londres.jpg" alt="Londres">
                     <h2>Londres</h2>
                     <p>Descubra o charme e a história de Londres - uma cidade que nunca para!</p>
+                    <button class="btn-modal" data-modal="modal-londres">Saiba mais</button>
                 </article>
                 <article class="card">
                     <img src="imagens/sydney.jpg" alt="Sydney">
                     <h2>Sydney</h2>
                     <p>Solta o espírito aventureiro na terra dos cangurus e das praias incríveis!</p>
+                    <button class="btn-modal" data-modal="modal-sydney">Saiba mais</button>
                 </article>
                 <article class="card">
                     <img src="imagens/nova-york.jpg" alt="Nova York">
                     <h2>Nova York</h2>
                     <p>A cidade que nunca dorme te convida para viver intensamente!</p>
+                    <button class="btn-modal" data-modal="modal-nova-york">Saiba mais</button>
                 </article>
                 <article class="card">
                     <img src="imagens/roma.jpg" alt="Roma">
                     <h2>Roma</h2>
                     <p>Reviva a grandiosidade do Império Romano!</p>
+                    <button class="btn-modal" data-modal="modal-roma">Saiba mais</button>
                 </article>
                 <article class="card">
                     <img src="imagens/cancun.jpg" alt="Cancún">
                     <h2>Cancún</h2>
                     <p>Praias paradisíacas, resorts de luxo e mar cristalino!</p>
+                    <button class="btn-modal" data-modal="modal-cancun">Saiba mais</button>
                 </article>
                 <article class="card">
                     <img src="imagens/dubai.jpg" alt="Dubai">
                     <h2>Dubai</h2>
                     <p>Luxo e inovação em meio ao deserto!</p>
+                    <button class="btn-modal" data-modal="modal-dubai">Saiba mais</button>
                 </article>
                 <article class="card">
                     <img src="imagens/cairo.jpg" alt="Cairo">
                     <h2>Cairo</h2>
                     <p>Explore as pirâmides e os mistérios do Antigo Egito!</p>
+                    <button class="btn-modal" data-modal="modal-cairo">Saiba mais</button>
                 </article>
                 <article class="card">
                     <img src="imagens/atenas.jpg" alt="Atenas">
                     <h2>Atenas</h2>
                     <p>Berço da civilização ocidental!</p>
+                    <button class="btn-modal" data-modal="modal-atenas">Saiba mais</button>
                 </article>
             </div>
         </section>
+
+        <!-- MODAIS -->
+        <div id="modal-paris" class="modal">
+            <div class="modal-content">
+                <span class="close-modal" data-modal="modal-paris">&times;</span>
+                <h2>Pacote Paris</h2>
+                <p>✨ 7 dias com hospedagem 4 estrelas + café da manhã incluso.<br>
+                    ✈️ Passagens ida e volta inclusas.<br>
+                    🎟️ Passeios pela Torre Eiffel, Museu do Louvre e cruzeiro pelo Sena.<br>
+                    💸 <strong>R$ 9.800 por pessoa</strong>.</p>
+            </div>
+        </div>
+
+        <div id="modal-rio" class="modal">
+            <div class="modal-content">
+                <span class="close-modal" data-modal="modal-rio">&times;</span>
+                <h2>Pacote Rio de Janeiro</h2>
+                <p>🏖️ 5 dias em Copacabana, hotel à beira-mar com café incluso.<br>
+                    ✈️ Passagens ida e volta inclusas.<br>
+                    🎟️ Visitas ao Cristo Redentor, Pão de Açúcar e passeio de barco.<br>
+                    💸 <strong>R$ 4.300 por pessoa</strong>.</p>
+            </div>
+        </div>
+
+        <div id="modal-floresta" class="modal">
+            <div class="modal-content">
+                <span class="close-modal" data-modal="modal-floresta">&times;</span>
+                <h2>Pacote Floresta Amazônica</h2>
+                <p>🌳 6 dias com hospedagem em ecolodge sustentável.<br>
+                    🚤 Passeios de barco e trilhas guiadas na selva.<br>
+                    ✈️ Passagens ida e volta inclusas.<br>
+                    🌿 Contato com comunidades ribeirinhas e fauna local.<br>
+                    💸 <strong>R$ 6.200 por pessoa</strong>.</p>
+            </div>
+        </div>
+
+        <div id="modal-buenos" class="modal">
+            <div class="modal-content">
+                <span class="close-modal" data-modal="modal-buenos">&times;</span>
+                <h2>Pacote Buenos Aires</h2>
+                <p>💃 4 dias com hospedagem no centro histórico.<br>
+                    ✈️ Passagens ida e volta inclusas.<br>
+                    🎭 Show de tango e city tour completo.<br>
+                    💸 <strong>R$ 3.500 por pessoa</strong>.</p>
+            </div>
+        </div>
+
+        <div id="modal-tokyo" class="modal">
+            <div class="modal-content">
+                <span class="close-modal" data-modal="modal-tokyo">&times;</span>
+                <h2>Pacote Tokyo</h2>
+                <p>🗼 7 dias em hotel moderno em Shibuya.<br>
+                    ✈️ Passagens ida e volta inclusas.<br>
+                    🏯 Visitas a templos, Akihabara e experiência com tecnologia VR.<br>
+                    💸 <strong>R$ 12.900 por pessoa</strong>.</p>
+            </div>
+        </div>
+
+        <div id="modal-londres" class="modal">
+            <div class="modal-content">
+                <span class="close-modal" data-modal="modal-londres">&times;</span>
+                <h2>Pacote Londres</h2>
+                <p>🎡 6 dias com hospedagem próxima à London Eye.<br>
+                    ✈️ Passagens ida e volta inclusas.<br>
+                    🏰 Passeios ao Big Ben, museus e castelos.<br>
+                    💸 <strong>R$ 10.700 por pessoa</strong>.</p>
+            </div>
+        </div>
+
+        <div id="modal-sydney" class="modal">
+            <div class="modal-content">
+                <span class="close-modal" data-modal="modal-sydney">&times;</span>
+                <h2>Pacote Sydney</h2>
+                <p>🌊 6 dias em hotel à beira-mar com café da manhã.<br>
+                    ✈️ Passagens ida e volta inclusas.<br>
+                    🐨 Visita ao zoológico, Opera House e mergulho na Great Barrier Reef.<br>
+                    💸 <strong>R$ 11.300 por pessoa</strong>.</p>
+            </div>
+        </div>
+
+        <div id="modal-nova-york" class="modal">
+            <div class="modal-content">
+                <span class="close-modal" data-modal="modal-nova-york">&times;</span>
+                <h2>Pacote Nova York</h2>
+                <p>🗽 5 dias com hospedagem em Manhattan.<br>
+                    ✈️ Passagens ida e volta inclusas.<br>
+                    🎭 Broadway, Central Park e observatório do Empire State.<br>
+                    💸 <strong>R$ 9.900 por pessoa</strong>.</p>
+            </div>
+        </div>
+
+        <div id="modal-roma" class="modal">
+            <div class="modal-content">
+                <span class="close-modal" data-modal="modal-roma">&times;</span>
+                <h2>Pacote Roma</h2>
+                <p>🏛️ 6 dias de imersão histórica com hospedagem central.<br>
+                    ✈️ Passagens ida e volta inclusas.<br>
+                    🏟️ Coliseu, Vaticano e fontes históricas.<br>
+                    💸 <strong>R$ 8.600 por pessoa</strong>.</p>
+            </div>
+        </div>
+
+        <div id="modal-cancun" class="modal">
+            <div class="modal-content">
+                <span class="close-modal" data-modal="modal-cancun">&times;</span>
+                <h2>Pacote Cancún</h2>
+                <p>🌴 5 dias em resort all inclusive com vista para o mar.<br>
+                    ✈️ Passagens ida e volta inclusas.<br>
+                    🐠 Snorkeling, festas temáticas e ruínas maias.<br>
+                    💸 <strong>R$ 7.500 por pessoa</strong>.</p>
+            </div>
+        </div>
+
+        <div id="modal-dubai" class="modal">
+            <div class="modal-content">
+                <span class="close-modal" data-modal="modal-dubai">&times;</span>
+                <h2>Pacote Dubai</h2>
+                <p>🌆 6 dias com hospedagem em hotel 5 estrelas.<br>
+                    ✈️ Passagens ida e volta inclusas.<br>
+                    🏜️ Safari no deserto, Burj Khalifa e Dubai Mall.<br>
+                    💸 <strong>R$ 13.200 por pessoa</strong>.</p>
+            </div>
+        </div>
+
+        <div id="modal-cairo" class="modal">
+            <div class="modal-content">
+                <span class="close-modal" data-modal="modal-cairo">&times;</span>
+                <h2>Pacote Cairo</h2>
+                <p>🏺 5 dias explorando o Egito Antigo.<br>
+                    ✈️ Passagens ida e volta inclusas.<br>
+                    🐪 Visitas às pirâmides, Esfinge e Museu Egípcio.<br>
+                    💸 <strong>R$ 7.000 por pessoa</strong>.</p>
+            </div>
+        </div>
+
+        <div id="modal-atenas" class="modal">
+            <div class="modal-content">
+                <span class="close-modal" data-modal="modal-atenas">&times;</span>
+                <h2>Pacote Atenas</h2>
+                <p>🏛️ 6 dias de cultura e história grega.<br>
+                    ✈️ Passagens ida e volta inclusas.<br>
+                    🏺 Acrópole, Ágora e gastronomia típica.<br>
+                    💸 <strong>R$ 6.800 por pessoa</strong>.</p>
+            </div>
+        </div>
 
         <section id="pacotes" class="pacotes"> <!-- Seção com lista de pacotes especiais -->
             <h2>Pacotes Especiais</h2>
@@ -160,14 +301,6 @@
                 <li> <strong> Rota do Vinho – Chile e Argentina </strong> - 8 dias | R$ 7.900,00 </li>
                 <li> <strong> Ilhas Gregas </strong> - 10 dias | R$ 14.000,00 </li>
             </ul>
-        </section>
-
-        <section id="historia" class="historia"> <!-- Seção com a história da empresa -->
-            <h2>Nossa História</h2>
-            <p> FlyAway nasceu com o sonho de transformar viagens em experiências inesquecíveis. Começamos com uma
-                pequena equipe apaixonada por explorar o mundo e, com o tempo, nos tornamos referência em turismo
-                acessível, seguro e personalizado. Hoje, ajudamos milhares de pessoas a realizarem suas viagens dos
-                sonhos, com conforto e tranquilidade.</p>
         </section>
     </main>
 
@@ -210,6 +343,7 @@
         });
     </script>
 
+    <script src="FlyAway.js"></script>
 
 </body>
 

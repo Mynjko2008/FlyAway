@@ -84,20 +84,30 @@ header {
 
 /* HERO SECTION */
 .hero {
-    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)); /* Gradiente escuro */
-    color: #FFFFFF; /* Cor do texto */
-    text-align: center; /* Centraliza texto */
-    padding: 8vh 5vw; /* Espaçamento interno responsivo */
+    background-image: url('imagens/Aviao.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Aqui está o efeito parallax */
+    color: #FFFFFF;
+    text-align: center;
+    padding: 20vh 5vw;
+    position: relative;
 }
 
-.hero h1 {
-    font-size: 2.5rem; /* Título grande */
-    margin-bottom: 1rem; /* Espaço abaixo do título */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5); /* Sobreposição escura */
+    z-index: 0;
 }
 
-.hero p {
-    font-size: 1.125rem; /* Texto maior */
-    margin-bottom: 2rem; /* Espaço abaixo do parágrafo */
+.hero h1, .hero p, .hero .btn {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 1rem; /* Espaço abaixo */
 }
 
 .btn {
@@ -113,6 +123,40 @@ header {
 .btn:hover {
     background-color:  #F76C5E; /* Cor ao passar o mouse */
 }
+
+/* CHAMADA PARA CADASTRO */
+.chamada-cadastro {
+    background-color: #2A9D8F;
+    color: white;
+    text-align: center;
+    padding: 4rem 5%;
+}
+
+.chamada-cadastro h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.chamada-cadastro p {
+    font-size: 1.125rem;
+    margin-bottom: 2rem;
+}
+
+.chamada-cadastro .btn {
+    background-color: #fa1905;
+    color: white;
+    padding: 0.75rem 2rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.chamada-cadastro .btn:hover {
+    background-color: #F76C5E;
+}
+
 
 /* SEÇÕES GERAIS */
 section {
@@ -166,6 +210,45 @@ section {
     padding: 0 0.75rem 1rem; /* Espaçamento interno */
 }
 
+/* Modais */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6);
+    backdrop-filter: blur(2px);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.close-modal {
+    float: right;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.btn-modal {
+    width: 100%;/* Largura total */
+    padding: 0.75rem;/* Espaçamento interno */
+    background-color: #fa1905;/* Cor de fundo */
+    color: white;/* Cor do texto */
+    font-size: 1rem;/* Tamanho da fonte */
+    border-radius: 0.75rem 0.75rem;/* Bordas arredondadas inferiores */
+    cursor: pointer;
+}
+
 /* LISTAS DE PACOTES */
 .pacotes ul {
     list-style: none; /* Remove marcadores */
@@ -181,7 +264,7 @@ section {
 .historia {
     background-color: #FAF9F6; /* Fundo claro */
     padding: 4rem 5%; /* Espaçamento interno */
-    border-top: 4px solid #2A9D8F; /* Borda superior colorida */
+    border-bottom: 4px solid #2A9D8F; /* Borda superior colorida */
     
 }
 
