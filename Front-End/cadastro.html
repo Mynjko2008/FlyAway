@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="cadastro.css" />
   <script src="https://kit.fontawesome.com/fec10f46ff.js" crossorigin="anonymous"></script>
   <link rel="shortcut icon" href="imagens/FlyAway-1.png" type="image/x-icon" />
+  <script src="https://unpkg.com/imask"></script>
 </head>
 
 <body>
@@ -25,8 +26,7 @@
         autocomplete="email" />
 
       <label for="input-telefone">Telefone</label>
-      <input type="tel" class="dombosco" id="input-telefone" name="input-telefone" placeholder="Insira seu telefone"
-        required autocomplete="tel" />
+      <input type="tel" class="dombosco" id="input-telefone" name="input-telefone" placeholder="Insira seu telefone" required autocomplete="tel" />
 
       <label for="input-senha">Senha</label>
       <div class="senha-container">
@@ -60,6 +60,8 @@
   <script>
     new window.VLibras.Widget('https://vlibras.gov.br/app');
   </script>
+
+  <script src="cadastro.js"></script>
 </body>
 
 </html>
